@@ -1,0 +1,43 @@
+---
+title: "Practice_2_GitHub"
+author: "Batoule Hyjazie"
+date: "26/01/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Configuring __GitHub__ in RStudio 
+
+##Check Configure Git
+usethis::git_sitrep()
+
+##Configure Git Accountt
+usethis::use_git_config(
+  use.name="BatouleHyjazie",
+  user.email="bhyja038@uottawa.ca"
+)
+
+##Check Again
+usethis::git_sitrep()
+
+##Create a PAT
+usethis::create_github_token()
+credentials::set_github_pat()
+
+##Check Again
+usethis::git_sitrep()
+
+##Initialize Project for Git
+usethis::use_git()
+
+##To Create GitHub Repo and Link It
+credentials::set_github_pat()
+usethis::use_github()
+usethis::git_vaccinate()
+
+##Terminal
+git branch -M main
+git push -u origin main
