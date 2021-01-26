@@ -9,29 +9,35 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#Check Configure Git
+#Configuring __GitHub__ in RStudio
+
+##Check Configure Git
 usethis::git_sitrep()
 
-#Configure Git Accountt
+##Configure Git Accountt
 usethis::use_git_config(
   use.name="BatouleHyjazie",
   user.email="bhyja038@uottawa.ca"
 )
 
-#Check Again
+##Check Again
 usethis::git_sitrep()
 
-#Create a PAT
+##Create a PAT
 usethis::create_github_token()
 credentials::set_github_pat()
 
-#Check Again
+##Check Again
 usethis::git_sitrep()
 
-#Initialize Project for Git
+##Initialize Project for Git
 usethis::use_git()
 
-#To Create GitHub Repo and Link It
+##To Create GitHub Repo and Link It
 credentials::set_github_pat()
 usethis::use_github()
 usethis::git_vaccinate()
+
+##Terminal
+git branch -M main
+git push -u origin main
