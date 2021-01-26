@@ -9,7 +9,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+<<<<<<< HEAD
 #Configuring __GitHub__ in RStudio 
+=======
+#Configuring __GitHub__ in RStudio
+>>>>>>> 1236c7ac26ff39f1f0a5739905f48899647f35c9
 
 ##Check Configure Git
 usethis::git_sitrep()
@@ -41,3 +45,11 @@ usethis::git_vaccinate()
 ##Terminal
 git branch -M main
 git push -u origin main
+
+##Data
+```{r penguins, echo=FALSE}
+library(palmerpenguins)
+data(package = 'palmerpenguins')
+plot(penguins$flipper_length_mm, penguins$body_mass_g, 
+xlab="Flipper Length (mm)", ylab="Body Mass (g)", main="Body Mass vs Flipper Length")
+```
